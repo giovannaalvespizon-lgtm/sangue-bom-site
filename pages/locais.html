@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Encontre unidades de doa&ccedil;&atilde;o de sangue, filtre a lista e planeje sua visita. Confirme atendimento e hor&aacute;rios com a unidade." name="description"/>
+  <meta content="#a90008" name="theme-color"/>
+  <title>
+   Locais de Doa&ccedil;&atilde;o | Sangue Bom
+  </title>
+  <link as="image" href="../assets/img/hero-imagem.png" rel="preload"/>
+  <link href="../css/global.css" rel="stylesheet"/>
+  <script defer="" src="../js/main.js">
+  </script>
+  <link href="../css/pages/locais.css" rel="stylesheet"/>
+  <script defer="" src="../js/data/unidades.js">
+  </script>
+  <script defer="" src="../js/pages/locais.js">
+  </script>
+ </head>
+ <body>
+  <a class="skip-link" href="#conteudo">
+   Pular para o conte&uacute;do
+  </a>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a aria-label="Sangue Bom, in&iacute;cio" class="brand" href="../index.html">
+     <span aria-hidden="true" class="brand-icon">
+      <svg aria-hidden="true" focusable="false" viewbox="0 0 24 24">
+       <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z">
+       </path>
+      </svg>
+     </span>
+     <span>
+      Sangue
+      <strong>
+       Bom
+      </strong>
+     </span>
+    </a>
+    <button aria-controls="navegacao" aria-expanded="false" class="menu-toggle" hidden="" type="button">
+     Menu
+     <span aria-hidden="true">
+      ☰
+     </span>
+    </button>
+    <nav aria-label="Navega&ccedil;&atilde;o principal" id="navegacao">
+     <a href="../index.html">
+      In&iacute;cio
+     </a>
+     <a href="../pages/criterios.html">
+      Quem pode doar
+     </a>
+     <a href="../pages/beneficios.html">
+      Benef&iacute;cios
+     </a>
+     <a aria-current="page" href="../pages/locais.html">
+      Locais de doa&ccedil;&atilde;o
+     </a>
+     <a href="../pages/historia.html">
+      Hist&oacute;rias
+     </a>
+     <a href="../pages/patrocinadores.html">
+      Patroc&iacute;nio
+     </a>
+     <a href="patrocinadores.html#canal-patrocinio">
+      Contato
+     </a>
+     <a class="button button-primary" href="../pages/locais.html">
+      Quero doar &rarr;
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main id="conteudo" tabindex="-1">
+   <section aria-labelledby="locais-title" class="hero location-hero">
+    <img alt="" class="hero-image" fetchpriority="high" height="532" src="../assets/img/hero-imagem.png" width="1440"/>
+    <div class="container hero-inner">
+     <div class="hero-copy">
+      <p class="eyebrow">
+       Solidariedade perto de voc&ecirc;
+      </p>
+      <h1 id="locais-title">
+       Encontre um
+       <br/>
+       hemocentro perto
+       <br/>
+       de voc&ecirc;.
+      </h1>
+      <p class="hero-description">
+       Doe onde for mais f&aacute;cil para voc&ecirc;
+       <br/>
+       e ajude a salvar vidas.
+      </p>
+      <div class="actions">
+       <a class="button button-white" href="#encontrar">
+        Encontrar uma unidade
+        <span aria-hidden="true">
+         &darr;
+        </span>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="busca-title" class="section location-search" id="encontrar">
+    <div class="container">
+     <div class="section-heading">
+      <p class="eyebrow">
+       Planeje sua visita
+      </p>
+      <h2 id="busca-title">
+       Encontre um
+       <span>
+        hemocentro
+       </span>
+      </h2>
+      <p>
+       Consulte a base de unidades de S&atilde;o Paulo.
+      </p>
+     </div>
+     <div class="location-filters">
+      <form class="search-field" id="form-busca" role="search">
+       <label class="sr-only" for="campo-busca">
+        Buscar por nome, bairro ou cidade
+       </label>
+       <input id="campo-busca" maxlength="120" placeholder="Nome, bairro ou cidade" type="search"/>
+       <button aria-label="Buscar unidades" type="submit">
+        &telrec;
+       </button>
+      </form>
+      <label class="sr-only" for="filtro-tipo">
+       Tipo de unidade
+      </label>
+      <select id="filtro-tipo">
+       <option value="">
+        Todas as unidades
+       </option>
+       <option>
+        Hemocentro
+       </option>
+       <option>
+        Hospital
+       </option>
+       <option>
+        Banco de Sangue
+       </option>
+      </select>
+      <button class="location-button" id="usar-localizacao" type="button">
+       ◎ Usar minha localiza&ccedil;&atilde;o
+      </button>
+      <button class="location-button" id="limpar-filtros" type="button">
+       Limpar filtros
+      </button>
+     </div>
+     <p aria-live="polite" class="location-status" id="mensagem" role="status">
+     </p>
+     <p class="location-reference" id="referencia">
+      Lista em ordem alfab&eacute;tica. Use sua localiza&ccedil;&atilde;o para ordenar por dist&acirc;ncia aproximada em linha reta.
+     </p>
+     <div class="location-panel">
+      <aside aria-labelledby="lista-title" class="location-list-panel">
+       <h3 id="lista-title">
+        Unidades dispon&iacute;veis
+       </h3>
+       <ul class="location-list" id="lista-unidades">
+       </ul>
+       <noscript>
+        <p>
+         Ative JavaScript para consultar a lista interativa. Voc&ecirc; tamb&eacute;m pode consultar o servi&ccedil;o oficial abaixo.
+        </p>
+       </noscript>
+       <button aria-haspopup="dialog" class="button button-primary" id="abrir-modal" type="button">
+        Ver todas as unidades
+        <span aria-hidden="true">
+         &rarr;
+        </span>
+       </button>
+      </aside>
+      <div class="location-map-panel">
+       <div aria-label="Mapa das unidades de doa&ccedil;&atilde;o" class="location-map" hidden="" id="mapa">
+       </div>
+       <div class="map-fallback" id="mapa-alternativa">
+        <span aria-hidden="true" class="map-symbol">
+         ◎
+        </span>
+        <h3>
+         Seu pr&oacute;ximo destino come&ccedil;a aqui.
+        </h3>
+        <p id="mapa-status" role="status">
+         Carregue o mapa interativo ou selecione uma unidade na lista para consultar os detalhes.
+        </p>
+        <button class="button button-primary" id="carregar-mapa" type="button">
+         Carregar mapa
+        </button>
+        <p class="map-privacy">
+         Ao carregar, seu navegador acessa Leaflet e OpenStreetMap. A lista funciona sem o mapa.
+        </p>
+       </div>
+       <section aria-labelledby="detalhe-nome" class="unit-detail" hidden="" id="unidade-detalhe">
+        <p class="eyebrow">
+         Unidade selecionada
+        </p>
+        <h3 id="detalhe-nome">
+        </h3>
+        <address id="detalhe-endereco">
+        </address>
+        <p>
+         Confirme o endere&ccedil;o, hor&aacute;rios e necessidade de agendamento diretamente com a unidade.
+        </p>
+        <a class="text-link" id="abrir-rota" rel="noopener noreferrer" target="_blank">
+         Consultar rota no Google Maps
+         <span aria-hidden="true">
+          &nearrow;
+         </span>
+         <span class="sr-only">
+          (abre em nova aba)
+         </span>
+        </a>
+       </section>
+      </div>
+     </div>
+     <aside class="notice">
+      <strong>
+       Antes de sair, confirme com a unidade.
+      </strong>
+      <p>
+       A base foi preservada dos arquivos enviados e ainda precisa de valida&ccedil;&atilde;o de endere&ccedil;os e coordenadas. N&atilde;o exibimos hor&aacute;rios ou status de &ldquo;aberto&rdquo; sem confirma&ccedil;&atilde;o. A busca consulta apenas esta base; n&atilde;o realiza pesquisa nacional nem consulta de CEP.
+      </p>
+      <a class="text-link" href="https://saudedigital.saude.sp.gov.br/servicos/poupatempo-da-saude/saude-para-todos/consultar-hemocentros">
+       Consultar hemocentros no servi&ccedil;o oficial de S&atilde;o Paulo &nearrow;
+      </a>
+     </aside>
+    </div>
+   </section>
+   <section aria-labelledby="valores-title" class="location-values">
+    <div class="container">
+     <h2 id="valores-title">
+      Informa&ccedil;&atilde;o para uma visita mais tranquila.
+     </h2>
+     <div class="values-grid">
+      <article>
+       <span aria-hidden="true">
+        ♡
+       </span>
+       <h3>
+        Atendimento
+       </h3>
+       <p>
+        Confirme como a unidade recebe doadores.
+       </p>
+      </article>
+      <article>
+       <span aria-hidden="true">
+        ▤
+       </span>
+       <h3>
+        Prepara&ccedil;&atilde;o
+       </h3>
+       <p>
+        Leve documento e confira os requisitos.
+       </p>
+      </article>
+      <article>
+       <span aria-hidden="true">
+        ◷
+       </span>
+       <h3>
+        Planejamento
+       </h3>
+       <p>
+        Verifique hor&aacute;rios e agendamento.
+       </p>
+      </article>
+      <article>
+       <span aria-hidden="true">
+        ◎
+       </span>
+       <h3>
+        Solidariedade
+       </h3>
+       <p>
+        Encontre seu pr&oacute;ximo passo para doar.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="cta-title" class="cta-section">
+    <div class="container cta-inner">
+     <div>
+      <p class="eyebrow">
+       J&aacute; conferiu tudo?
+      </p>
+      <h2 id="cta-title">
+       Planeje sua visita.
+       <br/>
+       Fa&ccedil;a parte dessa corrente.
+      </h2>
+      <p>
+       Confira os requisitos e escolha uma unidade.
+      </p>
+     </div>
+     <a class="button button-white" href="../pages/criterios.html">
+      Conferir requisitos &rarr;
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <a class="brand" href="../index.html">
+      Sangue
+      <strong>
+       Bom
+      </strong>
+     </a>
+     <p>
+      Conscientizar, aproximar e facilitar.
+      <br/>
+      Uma corrente de solidariedade.
+     </p>
+    </div>
+    <nav aria-label="Links do rodap&eacute;">
+     <h2>
+      Explore
+     </h2>
+     <a href="../pages/criterios.html">
+      Quem pode doar
+     </a>
+     <a href="locais.html">
+      Locais de doa&ccedil;&atilde;o
+     </a>
+     <a href="../index.html#duvidas">
+      D&uacute;vidas frequentes
+     </a>
+     <a href="beneficios.html">
+      Direitos e benef&iacute;cios
+     </a>
+     <a href="../pages/historia.html">
+      Hist&oacute;rias que inspiram
+     </a>
+     <a href="../pages/patrocinadores.html">
+      Patroc&iacute;nio
+     </a>
+     <a href="patrocinadores.html#canal-patrocinio">
+      Contato
+     </a>
+    </nav>
+    <div>
+     <h2>
+      Informa&ccedil;&atilde;o respons&aacute;vel
+     </h2>
+     <p>
+      Conte&uacute;do informativo. A aptid&atilde;o para doar &eacute; definida pelo servi&ccedil;o de hemoterapia.
+     </p>
+     <a href="https://www.gov.br/saude/pt-br/composicao/saes/doacao-de-sangue">
+      Fonte: Minist&eacute;rio da Sa&uacute;de
+     </a>
+     <a href="https://saudedigital.saude.sp.gov.br/servicos/poupatempo-da-saude/saude-para-todos/consultar-hemocentros">
+      Fonte: Sa&uacute;de Digital Paulista
+     </a>
+    </div>
+   </div>
+   <div class="container footer-bottom">
+    <p>
+     &copy;
+     <span id="ano">
+      2026
+     </span>
+     Sangue Bom.
+    </p>
+    <a href="#conteudo">
+     Voltar ao topo
+     <span aria-hidden="true">
+      &uarr;
+     </span>
+    </a>
+   </div>
+  </footer>
+  <dialog aria-labelledby="modal-title" class="units-dialog" id="modal-unidades">
+   <div class="dialog-header">
+    <h2 id="modal-title">
+     Todas as unidades da base
+    </h2>
+    <button aria-label="Fechar lista de unidades" autofocus="" id="fechar-modal" type="button">
+     &times;
+    </button>
+   </div>
+   <p>
+    Esta lista mostra todas as unidades, independentemente dos filtros.
+   </p>
+   <ul class="location-list" id="lista-modal">
+   </ul>
+  </dialog>
+ </body>
+</html>

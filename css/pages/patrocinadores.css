@@ -1,0 +1,195 @@
+/* Sexta pagina: componentes compartilhados com a Home. */
+.sponsor-hero {
+  background:var(--red-dark);
+  color:white;
+  padding:64px 0
+}
+.sponsor-hero-inner {
+  display:grid;
+  gap:40px;
+  align-items:center
+}
+.sponsor-hero .eyebrow {
+  color:#ffe1e3
+}
+.sponsor-hero h1 {
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  font-weight:850
+}
+.sponsor-lead {
+  color:#fff0f1;
+  font-size:1.15rem;
+  margin-top:24px
+}
+.sponsor-emblem {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  border:1px solid #cf7178;
+  border-radius:28px;
+  padding:28px;
+  color:white
+}
+.sponsor-emblem>span {
+  font-size:6rem;
+  line-height:1
+}
+.sponsor-emblem strong {
+  font-size:1.4rem;
+  line-height:1.25
+}
+.sponsor-intro {
+  padding-bottom:24px
+}
+.sponsor-master-section {
+  background:var(--surface)
+}
+.sponsor-card {
+  border:1px solid var(--border);
+  border-radius:22px;
+  background:white;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  transition:all .3s ease;
+  min-width:0
+}
+.sponsor-card h3 {
+  margin:22px 0 14px;
+  font-size:1.2rem
+}
+.sponsor-card p {
+  font-size:.9rem
+}
+.brand-placeholder {
+  display:grid;
+  place-items:center;
+  min-height:84px;
+  width:100%;
+  font-size:1.8rem;
+  font-weight:850;
+  letter-spacing:-.05em;
+  color:var(--ink);
+  overflow-wrap:anywhere
+}
+.unimed {
+  background:#007f4e;
+  color:white;
+  border-radius:14px;
+  font-size:2rem
+}
+.dasa {
+  color:#292b54
+}
+.fleury {
+  color:#8b1720
+}
+.ems {
+  color:#00789d
+}
+.raia {
+  color:#9e1231
+}
+.euro {
+  color:#233577
+}
+.einstein {
+  color:#005a93;
+  font-size:1.3rem
+}
+.partner-status {
+  display:inline-block;
+  padding:6px 12px;
+  background:var(--red-soft);
+  color:var(--red-dark);
+  border-radius:99px;
+  font-size:.7rem;
+  font-weight:700;
+  margin:20px 0
+}
+.sponsor-card .text-link {
+  margin-top:auto;
+  padding-top:10px
+}
+.sponsor-master {
+  max-width:960px;
+  margin-inline:auto;
+  gap:28px
+}
+.sponsor-master .text-link {
+  display:flex
+}
+.sponsor-grid {
+  display:grid;
+  gap:26px
+}
+.sponsor-proposal {
+  background:var(--surface)
+}
+.proposal-box {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:26px
+}
+.proposal-box>div {
+  flex:1;
+  min-width:200px
+}
+.proposal-box p:not(.eyebrow) {
+  margin-top:16px
+}
+.proposal-heart {
+  font-size:5rem;
+  line-height:1;
+  color:var(--red)
+}
+.proposal-box h2 {
+  font-size:clamp(1.8rem,3vw,2.5rem)
+}
+.sponsor-card:focus-within {
+  transform:translateY(-10px);
+  box-shadow:var(--shadow)
+}
+@media(min-width:650px) {
+  .sponsor-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .sponsor-master {
+    display:grid;
+    grid-template-columns:230px 1fr;
+    text-align:left;
+    align-items:center
+  }
+  .sponsor-master h3 {
+    margin-top:0
+  }
+  .sponsor-master .brand-placeholder {
+    height:110px
+  }
+}
+@media(min-width:1000px) {
+  .sponsor-hero {
+    padding:88px 0
+  }
+  .sponsor-hero-inner {
+    grid-template-columns:1.4fr 1fr;
+    gap:70px
+  }
+  .sponsor-grid {
+    grid-template-columns:repeat(3,minmax(0,1fr))
+  }
+}
+@media(hover:hover) and (pointer:fine) {
+  .sponsor-card:hover {
+    transform:translateY(-10px);
+    box-shadow:var(--shadow)
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .sponsor-card:hover,.sponsor-card:focus-within {
+    transform:none
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sangue Bom: iniciar servidor local",
+      "type": "process",
+      "command": "python",
+      "windows": {
+        "command": "py"
+      },
+      "args": [
+        "scripts/servir.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Sangue Bom: verificar arquivos e links",
+      "type": "process",
+      "command": "python",
+      "windows": {
+        "command": "py"
+      },
+      "args": [
+        "scripts/verificar.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
